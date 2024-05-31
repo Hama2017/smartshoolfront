@@ -1,0 +1,61 @@
+  <div class="row mt-9">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header border-bottom-0">
+          <div class="card-title">
+            Inscription Eleve
+          </div>
+        </div>
+        <div class="card-body">
+          <form class="needs-validation" (ngSubmit)="inserDataEleve()" novalidate>
+          <div id="wizard1">
+            <h3>Informations Eleve</h3>
+            <section>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="control-group form-group">
+                    <label class="form-label" for="validationCustom01">Prenom</label>
+                    <input type="text" class="form-control required"  id="validationCustom01" name="Prenom" [(ngModel)]="eleve.Prenom" placeholder="">
+                  </div>
+                  <div class="control-group form-group">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-control required" name="Nom"  [(ngModel)]="eleve.Nom" placeholder="">
+                  </div>
+
+                  <div class="control-group form-group">
+                    <label class="form-label">Date de naissance</label>
+                    <input type="date" class="form-control required" name="DateNaiss"  [(ngModel)]="eleve.DateNaiss" placeholder="">
+                  </div>
+                  <div class="control-group form-group">
+                    <label class="form-label">Lieu de naissance</label>
+                    <input type="text" class="form-control required" name="LieuNaiss" [(ngModel)]="eleve.LieuNaiss" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="control-group form-group">
+                    <label class="form-label">Adresse</label>
+                    <input type="text" class="form-control required" name="Adresse"  [(ngModel)]="eleve.Adresse" placeholder="">
+                  </div>
+                  <div class="control-group form-group">
+                    <label class="form-label">Sexe</label>
+                    <select class="form-control form-select" name="Sexe" [(ngModel)]="eleve.Sexe" required>
+                      <option [value]="undefined" disabled>Sélectionner le sexe</option>
+                      <option value="Masculin">Masculin</option>
+                      <option value="Femminin">Femminin</option>
+                    </select>
+                  </div>
+
+                  <div class="control-group form-group">
+                    <label class="form-label">Telephone</label>
+                    <input type="text" class="form-control required" name="NumeroTelephone"  [(ngModel)]="eleve.NumeroTelephone" placeholder="">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
